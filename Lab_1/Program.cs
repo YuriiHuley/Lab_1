@@ -5,7 +5,7 @@ namespace Lab_1
     class Program
     {
         //1
-        public static int GetArraySize(int N)
+        public static int GetArraySize(long N)
         {
             int a = 0;
             while (N != 0)
@@ -18,13 +18,13 @@ namespace Lab_1
         }
 
         //2
-        public static int[] GetArray(int N)
+        public static long[] GetArray(long N)
         {
             int lenghtArray = GetArraySize(N);
-            int[] numbers = new int[lenghtArray];
+            long[] numbers = new long[lenghtArray];
             for (int i = lenghtArray - 1; i >= 0; i--)
             {
-                int res= N % 10;
+                long res= N % 10;
                 N /= 10;
                 numbers[i] = res;
                 
@@ -40,11 +40,11 @@ namespace Lab_1
         }
 
         //3
-        public static double ArithmeticMean(int N)
+        public static double ArithmeticMean(long N)
         {
 
-            int[] ar = GetArray(N);
-            int sum = 0;
+            long[] ar = GetArray(N);
+            long sum = 0;
             for (int i = 0; i < ar.Length; i++)
             {
                 sum += ar[i];
@@ -55,10 +55,10 @@ namespace Lab_1
         }
 
         //4
-        public static double GeometricMean(int N)
+        public static double GeometricMean(long N)
         {
-            int[] ar = GetArray(N);
-            int mult = 1;
+            long[] ar = GetArray(N);
+            long mult = 1;
             for (int i = 0; i < ar.Length; i++)
             {
                 mult *= ar[i];
@@ -69,7 +69,7 @@ namespace Lab_1
         }
 
         //5
-        public static int Factorial(int N)
+        public static int Factorial(long N)
         {
             int factorial = 1; // значення факторіалу
             for (int i = 2; i <= N; i++) // цикл починаємо з 2 бо нема сенсу починати з 1
@@ -81,7 +81,7 @@ namespace Lab_1
         }
 
         //6
-        public static int SumEven(int N)
+        public static int SumEven(long N)
         {
             int sum = 0;
             for (int i = 1; i <= N; i++)
@@ -96,7 +96,7 @@ namespace Lab_1
         }
 
         //7
-        public static int SumOdd(int N)
+        public static int SumOdd(long N)
         {
             int sum = 0;
             int i = 1;
@@ -147,15 +147,51 @@ namespace Lab_1
 
         static void Main(string[] args)
         {
-            int N = 253;
+            long N;
+            int start, finish;
+            
+            while (true)
+            {
+                try
+                {
+                    Console.Write("Enter N ");
+                    N = Convert.ToInt64(Console.ReadLine());
+                    break;
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("Number is outside the range of the int64 type. ");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Wrong format");
+                }
+            }
+
             Console.WriteLine(GetArraySize(N));
             Console.WriteLine(GetArray(N));
             Console.WriteLine(ArithmeticMean(N));
             Console.WriteLine(GeometricMean(N));
+            Console.WriteLine(Factorial(N));
             Console.WriteLine(SumEven(N));
             Console.WriteLine(SumOdd(N));
-            Console.WriteLine(SumOdd(5,34));
-            Console.WriteLine(SumEven(3,100));
+            
+            Console.WriteLine("Set array interval, first element");
+            start = Convert.ToByte(Console.ReadLine());
+            Console.Write("last element: ");
+            finish = Convert.ToByte(Console.ReadLine());
+
+            if (finish-start < 0)
+            {
+                Console.WriteLine("Wrong diapason");
+            }
+            else
+            {
+                Console.WriteLine(SumOdd(start, finish));
+                Console.WriteLine(SumEven(start, finish));
+
+            }
+
         }
     }
 } 
