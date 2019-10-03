@@ -1,0 +1,11 @@
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\bin\Debug\netcoreapp2.1\Lab_1.deps.json
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\bin\Debug\netcoreapp2.1\Lab_1.runtimeconfig.json
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\bin\Debug\netcoreapp2.1\Lab_1.runtimeconfig.dev.json
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\bin\Debug\netcoreapp2.1\Lab_1.dll
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\bin\Debug\netcoreapp2.1\Lab_1.pdb
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\obj\Debug\netcoreapp2.1\Lab_1.csprojAssemblyReference.cache
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\obj\Debug\netcoreapp2.1\Lab_1.csproj.CoreCompileInputs.cache
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\obj\Debug\netcoreapp2.1\Lab_1.AssemblyInfoInputs.cache
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\obj\Debug\netcoreapp2.1\Lab_1.AssemblyInfo.cs
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\obj\Debug\netcoreapp2.1\Lab_1.dll
+C:\Users\Користувач\RiderProjects\Lab_1\Lab_1\obj\Debug\netcoreapp2.1\Lab_1.pdb
